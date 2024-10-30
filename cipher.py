@@ -1,5 +1,5 @@
 letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
-cipher = {letters[i]: letters[(i+6) % len(letters)] for i in range(len(letters))}
+cipher = {letters[i]: letters[(i+5) % len(letters)] for i in range(len(letters))}
 
 def transform_message(message, cipher):
     
@@ -15,7 +15,7 @@ test_encoded = transform_message(test, cipher)
 
 print(test_encoded)
 
-decoder = {letters[i]: letters[(i-6) % len(letters)] for i in range(len(letters))}
+decoder = {letters[i]: letters[(i-5) % len(letters)] for i in range(len(letters))}
 
 test_decoded = transform_message(test_encoded, decoder)
 
